@@ -34,12 +34,12 @@
   <h2>About Me</h2>
   <p>
     I am a B.Tech student focused on building practical Security Operations Center (SOC)
-    investigation skills. My learning approach is lab-driven — documenting process analysis,
-    PowerShell detection, LOLBin behavior, and Windows host investigations.
+    investigation skills through hands-on labs. My work centers on Windows host analysis,
+    PowerShell behavior detection, LOLBin patterns, and process lineage investigation.
   </p>
   <p>
-    I focus on detection logic, process lineage, command-line analysis, and investigation workflow.
-    I maintain structured SOC lab writeups on GitHub to demonstrate analyst thinking and methodology.
+    I document all my SOC labs with commands, findings, and analyst conclusions on GitHub
+    to demonstrate investigation methodology and blue team thinking.
   </p>
 </section>
 
@@ -48,9 +48,9 @@
   <div class="grid">
     <div class="card">Process & PID Investigation</div>
     <div class="card">PowerShell Behavior Detection</div>
-    <div class="card">Parent-Child Process Analysis</div>
-    <div class="card">LOLBin Abuse Patterns</div>
-    <div class="card">Windows Command-Line Forensics</div>
+    <div class="card">Process Tree Analysis</div>
+    <div class="card">LOLBin Detection Basics</div>
+    <div class="card">Windows Host Triage</div>
     <div class="card">SOC Lab Documentation</div>
   </div>
 </section>
@@ -58,49 +58,55 @@
 <section id="projects" class="section">
   <h2>SOC Labs & Investigations</h2>
 
+  <!-- Project 1 -->
   <div class="project">
-
-    <h3>Windows Port & Process Investigation</h3>
-    <p><strong>Scenario:</strong> Investigated listening ports and mapped them to running processes.</p>
+    <h3>Day 1 — Windows Host Port & Process Investigation</h3>
+    <p><strong>Objective:</strong> Map listening ports to owning processes and verify legitimacy.</p>
     <ul>
-      <li>Commands: netstat -ano, tasklist, wmic</li>
-      <li>Mapped ports → PID → executable path</li>
-      <li>Verified binary signatures</li>
-      <li>Identified legitimate vs suspicious services</li>
+      <li>Enumerated listening ports using netstat</li>
+      <li>Mapped PID to process using tasklist</li>
+      <li>Extracted executable path via wmic</li>
+      <li>Validated digital signatures</li>
+      <li>Performed SOC-style host triage</li>
     </ul>
-    <p><strong>SOC Value:</strong> Host-level triage and service validation skill.</p>
-    <a href="YOUR_GITHUB_LINK_HERE" class="link">View Lab Writeup</a>
-
+    <p><strong>SOC Skills Demonstrated:</strong> Port → PID → Process correlation, service validation, host investigation workflow.</p>
+    <a href="https://github.com/ARYAN-897/soc-labs/blob/main/day1-host-port-investigation.md" class="link" target="_blank">
+      View GitHub Lab Writeup
+    </a>
   </div>
 
+  <!-- Project 2 -->
   <div class="project">
-
-    <h3>Suspicious PowerShell Activity Detection</h3>
-    <p><strong>Scenario:</strong> Detected hidden PowerShell execution with suspicious flags.</p>
+    <h3>Case 2 — Suspicious PowerShell Activity Detection</h3>
+    <p><strong>Objective:</strong> Detect suspicious PowerShell execution using command-line analysis.</p>
     <ul>
-      <li>Flags analyzed: -nop, -w hidden</li>
-      <li>Extracted command line via WMIC</li>
-      <li>Mapped parent process chain</li>
-      <li>Behavior-based detection reasoning</li>
+      <li>Simulated hidden PowerShell execution</li>
+      <li>Detected suspicious flags (-nop, -w hidden)</li>
+      <li>Extracted command line from running process</li>
+      <li>Traced parent process chain</li>
+      <li>Applied behavior-based detection logic</li>
     </ul>
-    <p><strong>SOC Value:</strong> LOLBin misuse detection pattern.</p>
-    <a href="YOUR_GITHUB_LINK_HERE" class="link">View Lab Writeup</a>
-
+    <p><strong>SOC Skills Demonstrated:</strong> LOLBin abuse detection, command-line forensics, PowerShell triage.</p>
+    <a href="https://github.com/ARYAN-897/soc-labs/blob/main/case2-suspicious-powershell.md" class="link" target="_blank">
+      View GitHub Lab Writeup
+    </a>
   </div>
 
+  <!-- Project 3 -->
   <div class="project">
-
-    <h3>Process Tree & LOLBin Analysis</h3>
-    <p><strong>Scenario:</strong> Built and investigated suspicious process chains.</p>
+    <h3>Day 3 — Process Tree & LOLBin Investigation</h3>
+    <p><strong>Objective:</strong> Analyze parent-child process chains to detect suspicious execution patterns.</p>
     <ul>
-      <li>cmd → powershell → child process chain</li>
-      <li>Parent PID tracing</li>
-      <li>Short-lived parent detection</li>
-      <li>Process lineage documentation</li>
+      <li>Built simulated cmd → powershell → child chain</li>
+      <li>Mapped multiple process IDs</li>
+      <li>Traced parent PIDs</li>
+      <li>Observed short-lived parent behavior</li>
+      <li>Documented LOLBin-style execution pattern</li>
     </ul>
-    <p><strong>SOC Value:</strong> Process tree triage & behavioral analysis.</p>
-    <a href="YOUR_GITHUB_LINK_HERE" class="link">View Lab Writeup</a>
-
+    <p><strong>SOC Skills Demonstrated:</strong> Process lineage analysis, parent-child tracing, behavioral detection.</p>
+    <a href="https://github.com/ARYAN-897/soc-labs/blob/main/day3-process-tree-investigation.md" class="link" target="_blank">
+      View GitHub Lab Writeup
+    </a>
   </div>
 
 </section>
@@ -108,10 +114,10 @@
 <section id="timeline" class="section alt">
   <h2>Learning Journey</h2>
   <ul class="timeline">
-    <li>Started SOC fundamentals & Windows log analysis</li>
-    <li>Performed host port & process investigations</li>
-    <li>Detected suspicious PowerShell execution</li>
-    <li>Built process tree investigation labs</li>
+    <li>SOC fundamentals and Windows investigation basics</li>
+    <li>Host port and process mapping labs</li>
+    <li>PowerShell suspicious behavior detection</li>
+    <li>Process tree and LOLBin investigation labs</li>
     <li>Publishing SOC lab reports on GitHub</li>
   </ul>
 </section>
@@ -119,20 +125,20 @@
 <section class="section">
   <h2>Tools & Commands Used</h2>
   <p class="tools">
-    tasklist • wmic • netstat • PowerShell • Event Viewer • Process Investigation • Command-line Forensics
+    tasklist • wmic • netstat • PowerShell • Event Viewer • Process Investigation • Command-line Analysis
   </p>
 </section>
 
 <section class="cta">
   <h2>Open to SOC Analyst Opportunities</h2>
-  <p>Seeking entry-level SOC / Blue Team roles where investigation and detection skills are valued.</p>
+  <p>Actively building hands-on SOC investigation skills and seeking entry-level SOC / Blue Team roles.</p>
 </section>
 
 <section id="contact" class="section">
   <h2>Contact</h2>
-  <p>Email: aryanmathur7042@gmail.com</p>
+  <p>Email:aryanmathur7042@gmail.com </p>
   <p>GitHub: github.com/ARYAN-897</p>
-  <p>LinkedIn: www.linkedin.com/in/aryan-mathur-81a3a3309</p>
+  <p>LinkedIn:www.linkedin.com/in/aryan-mathur-81a3a3309 </p>
 </section>
 
 <footer>
