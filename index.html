@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aryan Mathur | SOC Analyst Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="logo">Aryan Mathur — SOC Portfolio</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">SOC Labs</a>
+    <a href="#timeline">Journey</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Entry-Level SOC Analyst</h1>
+  <p>Blue Team Learner • Process & Log Investigation • Hands-on SOC Labs</p>
+  <div class="hero-buttons">
+    <a href="#projects" class="btn">View SOC Labs</a>
+    <a href="resume.pdf" class="btn-outline" download>Download Resume</a>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
+    I am a B.Tech student focused on building practical Security Operations Center (SOC)
+    investigation skills. My learning approach is lab-driven — documenting process analysis,
+    PowerShell detection, LOLBin behavior, and Windows host investigations.
+  </p>
+  <p>
+    I focus on detection logic, process lineage, command-line analysis, and investigation workflow.
+    I maintain structured SOC lab writeups on GitHub to demonstrate analyst thinking and methodology.
+  </p>
+</section>
+
+<section id="skills" class="section alt">
+  <h2>SOC Skills</h2>
+  <div class="grid">
+    <div class="card">Process & PID Investigation</div>
+    <div class="card">PowerShell Behavior Detection</div>
+    <div class="card">Parent-Child Process Analysis</div>
+    <div class="card">LOLBin Abuse Patterns</div>
+    <div class="card">Windows Command-Line Forensics</div>
+    <div class="card">SOC Lab Documentation</div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <h2>SOC Labs & Investigations</h2>
+
+  <div class="project">
+
+    <h3>Windows Port & Process Investigation</h3>
+    <p><strong>Scenario:</strong> Investigated listening ports and mapped them to running processes.</p>
+    <ul>
+      <li>Commands: netstat -ano, tasklist, wmic</li>
+      <li>Mapped ports → PID → executable path</li>
+      <li>Verified binary signatures</li>
+      <li>Identified legitimate vs suspicious services</li>
+    </ul>
+    <p><strong>SOC Value:</strong> Host-level triage and service validation skill.</p>
+    <a href="YOUR_GITHUB_LINK_HERE" class="link">View Lab Writeup</a>
+
+  </div>
+
+  <div class="project">
+
+    <h3>Suspicious PowerShell Activity Detection</h3>
+    <p><strong>Scenario:</strong> Detected hidden PowerShell execution with suspicious flags.</p>
+    <ul>
+      <li>Flags analyzed: -nop, -w hidden</li>
+      <li>Extracted command line via WMIC</li>
+      <li>Mapped parent process chain</li>
+      <li>Behavior-based detection reasoning</li>
+    </ul>
+    <p><strong>SOC Value:</strong> LOLBin misuse detection pattern.</p>
+    <a href="YOUR_GITHUB_LINK_HERE" class="link">View Lab Writeup</a>
+
+  </div>
+
+  <div class="project">
+
+    <h3>Process Tree & LOLBin Analysis</h3>
+    <p><strong>Scenario:</strong> Built and investigated suspicious process chains.</p>
+    <ul>
+      <li>cmd → powershell → child process chain</li>
+      <li>Parent PID tracing</li>
+      <li>Short-lived parent detection</li>
+      <li>Process lineage documentation</li>
+    </ul>
+    <p><strong>SOC Value:</strong> Process tree triage & behavioral analysis.</p>
+    <a href="YOUR_GITHUB_LINK_HERE" class="link">View Lab Writeup</a>
+
+  </div>
+
+</section>
+
+<section id="timeline" class="section alt">
+  <h2>Learning Journey</h2>
+  <ul class="timeline">
+    <li>Started SOC fundamentals & Windows log analysis</li>
+    <li>Performed host port & process investigations</li>
+    <li>Detected suspicious PowerShell execution</li>
+    <li>Built process tree investigation labs</li>
+    <li>Publishing SOC lab reports on GitHub</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Tools & Commands Used</h2>
+  <p class="tools">
+    tasklist • wmic • netstat • PowerShell • Event Viewer • Process Investigation • Command-line Forensics
+  </p>
+</section>
+
+<section class="cta">
+  <h2>Open to SOC Analyst Opportunities</h2>
+  <p>Seeking entry-level SOC / Blue Team roles where investigation and detection skills are valued.</p>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>Email: aryanmathur7042@gmail.com</p>
+  <p>GitHub: github.com/ARYAN-897</p>
+  <p>LinkedIn: www.linkedin.com/in/aryan-mathur-81a3a3309</p>
+</section>
+
+<footer>
+  © 2026 Aryan Mathur — SOC Analyst Portfolio
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
