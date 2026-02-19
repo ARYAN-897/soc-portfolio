@@ -1,0 +1,143 @@
+# 🛡️ SOC Lab 1 – PowerShell Monitoring & Group Policy Configuration
+
+**Name:** Aryan Mathur  
+**Roll No:** 2300290120064  
+
+---
+
+## 📌 Overview
+
+This lab demonstrates how to configure PowerShell execution policies using Group Policy and monitor PowerShell activities through Event Viewer for security analysis in a SOC (Security Operations Center) environment.
+
+PowerShell is widely used for system administration but is also frequently abused by attackers. Therefore, proper logging and monitoring are critical for detection and response.
+
+---
+
+# 🎯 Aim
+
+To configure PowerShell execution policies using Group Policy and monitor PowerShell activities using Event Viewer to understand how PowerShell-based attacks can be detected in a SOC environment.
+
+---
+
+# 📖 Theory
+
+## 🔹 PowerShell in SOC
+
+PowerShell is a powerful scripting engine in Windows systems. Attackers commonly use it for:
+
+- Remote command execution  
+- Privilege escalation  
+- Lateral movement  
+- Malware execution  
+
+Monitoring PowerShell activity is essential for endpoint detection.
+
+---
+
+## 🔹 Group Policy
+
+Group Policy allows administrators to:
+
+- Enforce execution policies
+- Enable logging features
+- Control script behavior
+- Configure system-wide security settings
+
+Group Policy settings override local configurations.
+
+---
+
+## 🔹 DISM (Deployment Image Servicing and Management)
+
+DISM is used to:
+
+- Install Windows feature packages
+- Enable or disable system components
+- Service Windows images
+
+In this lab, DISM was used to install:
+- Group Policy Client Tools
+- Group Policy Client Extensions
+
+---
+
+## 🔹 Event ID 4104
+
+Event ID 4104 logs:
+
+- PowerShell script block execution
+- Remote command execution
+- Script contents (if Script Block Logging is enabled)
+
+This is highly important for SOC monitoring.
+
+---
+
+# 🛠️ Procedure
+
+## Step 1: Install Group Policy Components
+
+Opened **Command Prompt as Administrator** and executed DISM commands to install:
+
+
+Installation completed successfully.
+
+---
+
+## Step 2: Verify Local User Accounts
+
+Opened **PowerShell as Administrator** and ran:
+
+```powershell
+Get-LocalUser | Select-Object Name, Enabled
+Computer Configuration
+→ Administrative Templates
+→ Windows Components
+→ Windows PowerShell
+Applications and Services Logs
+→ Microsoft
+→ Windows
+→ PowerShell
+→ Operational
+
+Observations
+
+PowerShell activities are logged when Script Block Logging is enabled.
+
+Event ID 4104 captures executed script content.
+
+Result
+
+Group Policy components were successfully installed.
+
+PowerShell execution policy was configured.
+
+Script Block Logging was enabled.
+
+Event ID 4104 logs were generated and observed.
+
+Local user accounts were verified.
+
+The system is now configured to monitor PowerShell activities effectively.
+
+Group Policy overrides local execution policy.
+
+Monitoring PowerShell logs is essential for detecting malicious scripts.
+
+Proper logging enhances SOC visibility and incident detection capability.
+
+🎓 Conclusion
+
+This lab successfully demonstrated how to configure and monitor PowerShell execution using Group Policy and Event Viewer.
+
+From a SOC perspective:
+
+PowerShell logging is critical for threat detection.
+
+Script Block Logging provides visibility into malicious scripts.
+
+Group Policy ensures centralized control over execution policies.
+
+Event monitoring helps detect suspicious remote command execution.
+
+This lab strengthens understanding of endpoint monitoring and PowerShell-based threat detection in a SOC environment.
